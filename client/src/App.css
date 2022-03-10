@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+Nav .active {
+    color: #ffe135 !important;
+}
+
+.gray {
+    color: #505050;
+}
+
+.gray--background {
+    background-color: #E6E6E6;
+    height: 100%;
+}
+
+.gap {
+    gap: 20px;
+}
+
+@media screen and (max-width: 960px) {
+    .gray {
+        color: #505050;
+        font-size: 10px;
+    }
+}
