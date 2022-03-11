@@ -4,7 +4,7 @@ import Button from './Button';
 
 export default function CardUI({cardProp}) {
 	
-	const {url, description, name, price, quantity} = cardProp;
+	const {url, description, name, price, quantity, _id} = cardProp;
 
 	return (
 		<div className="card mx-3">
@@ -19,6 +19,7 @@ export default function CardUI({cardProp}) {
 	                        className='btns'
 	                        buttonStyle='btn--add--card'
 	                        buttonSize='btn--small'
+	                        id={_id}
 	                    >
 	                        ADD TO CART
 	                    </Button>				 
@@ -26,6 +27,7 @@ export default function CardUI({cardProp}) {
 	                        className='btns'
 	                        buttonStyle='btn--info'
 	                        buttonSize='btn--info--size'
+	                        id={_id}
 	                    >
 	                        LEARN MORE
 	                    </Button>

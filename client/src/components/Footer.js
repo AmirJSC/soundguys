@@ -6,6 +6,9 @@ export default function Footer() {
 				<p className="footer-subscription-heading">
 				Subscribe to get the latest on sales, new releases and more.
 				</p>
+				<p className="footer-subscription-text">
+				Unsubscribe anytime
+				</p>
 			</section>
 		</div>
 		)

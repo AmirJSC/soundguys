@@ -10,7 +10,7 @@ Nav .active {
 }
 
 .gray {
-    color: #505050;
+    color: #606060;
 }
 
 .gray--background {
@@ -21,6 +21,44 @@ Nav .active {
 .gap {
     gap: 20px;
 }
+
+.text-link {
+    color: #484848;
+    text-decoration: inherit;
+}
+
+.text-link:hover {
+    color: #ffe135;
+    transition: .2s;
+}
+
+.paperStyle {
+    padding: 20px;
+    height: 75vh;
+    width: 80%;
+    margin: 30px auto;
+}
+
+@media screen and (min-width: 390px) {
+    .paperStyle {
+        height: 50vh;
+    }
+}
+
+@media screen and (min-width: 540px) {
+    .paperStyle {
+        width: 55%;
+        height: 60vh;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .paperStyle {
+        width: 25%;
+        height: 75vh;
+    }
+}
+
 
 @media screen and (max-width: 960px) {
     .gray {
