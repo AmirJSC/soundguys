@@ -22,12 +22,21 @@
 	transform: scale(1.1);
 }
 
-/*.card-body {
-	padding: 3rem 0 !important;
+.bttn {
+    padding: 8px 20px;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    cursor: pointer;
 }
 
-.card-text {
-	font-size: .9rem;
-	padding: .4rem 1.9rem;
+.btn--add--card {
+    background-color: #505050;
+    color: #fff;
+    border: none;
 }
-*/
+
+.btn--small {
+    padding: .6rem 2.5rem;
+    font-size: .8rem;
+}

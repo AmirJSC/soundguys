@@ -15,24 +15,18 @@ export default function CardUI({cardProp}) {
 				<h5 className="card-title">{name}</h5>
 				<p className="card-subtitle">${price}</p>
 				<div className="d-flex justify-content-start">
-					 <Button
-	                        className='btns'
-	                        buttonStyle='btn--add--card'
-	                        buttonSize='btn--small'
-	                        id={_id}
-	                    >
-	                        ADD TO CART
-	                    </Button>				 
-	                    <Button
-	                        className='btns'
-	                        buttonStyle='btn--info'
-	                        buttonSize='btn--info--size'
-	                        id={_id}
-	                    >
-	                        LEARN MORE
-	                    </Button>
-                   </div>
+					<button className="bttn btn--add--card btn--small">
+	                    ADD TO CART
+	                </button>				 
+				    <Button
+	                    buttonStyle='btn--info'
+	                    buttonSize='btn--info--size'
+	                    id={_id}
+	                >
+	                LEARN MORE
+	                </Button>
+                </div>
 			</div>
 		</div>
-		)
+	)
 }
