@@ -13,7 +13,7 @@ export default function Cart() {
 	return (
 		<Navbar sticky='top' collapseOnSelect expand="lg" bg="dark" variant="dark">
   			<Container>
-  			<Navbar.Brand as={Link} to='/'>Soundguys</Navbar.Brand>
+  			<Navbar.Brand as={Link} to='/'>SoundGuys</Navbar.Brand>
   			<Navbar.Toggle aria-controls="responsive-navbar-nav" />
   			<Navbar.Collapse id="responsive-navbar-nav">
     			<Nav className="me-auto">

@@ -26,7 +26,7 @@ export default function Categories() {
 		<Fragment>
 		<div className="gray--background">
 			<h1 className="text-center">{title}</h1>
-			<div className="d-flex flex-wrap justify-content-center gap">
+			<div className="d-flex flex-wrap justify-content-center gap pb-4">
 				{products}
 			</div>
 		</div>

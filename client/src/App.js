@@ -17,7 +17,7 @@ import Logout from './pages/Logout';
 import Error from './pages/Error';
 // Components
 import AppNavbar from './components/AppNavbar';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
 
 
 
@@ -75,6 +75,7 @@ function App() {
                 <Route exact path ='/logout' element={<Logout/>}/>
                 <Route exact path ='*' element={<Error/>}/>
             </Routes>
+            <Footer/>
         </Router>
         </UserProvider>
     );
