@@ -13,11 +13,7 @@ export default function CardUI({cardProp}) {
 			</div>
 			<div className="card-body text-dark">
 				<h5 className="card-title">{name}</h5>
-				<p className="card-subtitle">${price}</p>
-				<div className="d-flex justify-content-start">
-					<button className="bttn btn--add--card btn--small">
-	                    ADD TO CART
-	                </button>				 
+				<p className="card-subtitle">${price}</p>		 
 				    <Button
 	                    buttonStyle='btn--info'
 	                    buttonSize='btn--info--size'
@@ -25,7 +21,6 @@ export default function CardUI({cardProp}) {
 	                >
 	                LEARN MORE
 	                </Button>
-                </div>
 			</div>
 		</div>
 	)

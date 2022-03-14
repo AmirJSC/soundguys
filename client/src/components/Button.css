@@ -33,17 +33,10 @@
     transition: all .3s ease-out;
 }
 
-.btn--add--card {
-    background-color: #505050;
-    color: var(--primary);
-    border: none;
-}
-
 .btn--info {
     background-color: var(--primary);
     color: var(--secondary);
-    border: none;
-    margin-left: 1rem;
+    border: 1px solid var(--primary);
     border-bottom: 1px solid #505050;
 }
 

@@ -1,5 +1,5 @@
 import { Fragment, useState, useEffect, useContext } from 'react';
-import { Navigate, Link } from 'react-router-dom';
+import { Navigate, Link, useNavigate, useLocation } from 'react-router-dom';
 import UserContext from '../UserContext';
 import Swal from 'sweetalert2';
 // Material UI 
@@ -7,7 +7,6 @@ import { Grid, Paper, Avatar, TextField, Button, Typography } from '@material-ui
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-
 
 export default function Login() {
 
@@ -17,6 +16,10 @@ export default function Login() {
 	const [isActive, setActive] = useState(false);
 	const avatarStyle = {backgroundColor: '#ffe135'};
 	const btnStyle = {margin: '9px 0'};
+
+	const navigate = useNavigate();
+  	const location = useLocation();
+  	const hasPreviousState = location.key !== "default";
 
 	function authenticate(e) {
 		e.preventDefault();
@@ -38,11 +41,19 @@ export default function Login() {
 				localStorage.setItem('token', data.access);
 				retrieveUserDetails(data.access);
 
+				if (hasPreviousState) {
+      				navigate(-1);
+    			} 
+    			else {
+      				navigate("/");
+    			}
+
 				Swal.fire({
 					title: 'Login Successful',
 					icon: 'success',
 					text: 'Shop and Enjoy'
 				})
+				console.log('lol')
 			}
 			else {
 				Swal.fire({ 
