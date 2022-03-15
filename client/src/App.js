@@ -35,6 +35,7 @@ function App() {
 
     // To keep the user logged in even when the page refreshes. 
     useEffect(() => {
+        console.log("HEYYY!")
         fetch('https://serene-sea-03250.herokuapp.com/users/', {
             method: 'GET',
             headers: {
