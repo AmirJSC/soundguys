@@ -12,15 +12,15 @@ export default function Sidebar() {
                     <ul className="sidebarList">
                         <li className="sidebarListItem active">
                             <AccountCircleIcon className="sidebarIcon"/>
-                            Account
+                            <span>Account</span>
                         </li>
                         <li className="sidebarListItem">
                             <Inventory className="sidebarIcon"/>
-                            Products
+                            <span>Products</span>
                         </li>
                         <li className="sidebarListItem">
                             <LineStyle className="sidebarIcon"/>
-                            Orders
+                            <span>Orders</span>
                         </li>
                     </ul>
                 </div>
