@@ -10,14 +10,15 @@ import Products from './pages/Products';
 import ProductView from './pages/ProductView';
 import Categories from './pages/Categories';
 import Cart from './pages/Cart';
-import Profile from './pages/Profile';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Logout from './pages/Logout';
 import Error from './pages/Error';
+import Dashboard from './pages/Dashboard';
+import Orders from './pages/Orders';
 // Components
-import AppNavbar from './components/AppNavbar';
-import Footer from './components/Footer';
+import AppNavbar from './components/AppNavbar/AppNavbar';
+import Footer from './components/Footer/Footer';
 
 
 
@@ -35,7 +36,6 @@ function App() {
 
     // To keep the user logged in even when the page refreshes. 
     useEffect(() => {
-        console.log("HEYYY!")
         fetch('https://serene-sea-03250.herokuapp.com/users/', {
             method: 'GET',
             headers: {
@@ -70,9 +70,11 @@ function App() {
                 <Route exact path ='/products/:productId' element={<ProductView/>}/>
                 <Route exact path ='/products/category/:category' element={<Categories/>}/>
                 <Route exact path ='/cart' element={<Cart/>}/>
-                <Route exact path ='/profile' element={<Profile/>}/>
                 <Route exact path ='/register' element={<Register/>}/>
                 <Route exact path ='/login' element={<Login/>}/>
+                <Route exact path ='/dashboard' element={<Dashboard/>}/>
+                <Route exact path='/dashboard/orders' element={<Orders/>}/>
+                <Route exact path='/dashboard/products' element={<Products/>}/>
                 <Route exact path ='/logout' element={<Logout/>}/>
                 <Route exact path ='*' element={<Error/>}/>
             </Routes>

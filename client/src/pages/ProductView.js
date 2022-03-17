@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { useParams, useNavigate } from 'react-router-dom';
-import ProductDisplay from '../components/ProductDisplay';
+import ProductDisplay from '../components/ProductDisplay/ProductDisplay';
 import Swal from 'sweetalert2';
 
 export default function ProductView() {
@@ -23,17 +23,21 @@ export default function ProductView() {
 			},
 			body: JSON.stringify({
 				productId: productId,
-				quantity: quantity
+				quantity: quantity,
+				url: url
 			})
 		})
 		.then(res => res.json())
 		.then(data => {
 			if(data === true) {
 				Swal.fire({
-					title: `${name} added to cart`,
-					icon: "success",
-					text: ""
-				})
+					  title: 'Sweet!',
+					  text: `(${quantity}) ${name} added to cart`,
+					  imageUrl: `${url}`,
+					  imageWidth: 200,
+					  imageHeight: 200,
+					  imageAlt: 'Custom image',
+					})
 
 				history(`/products/category/${category}`);
 			}

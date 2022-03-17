@@ -1,6 +1,6 @@
 import { Card } from 'react-bootstrap';
 import './Card.css';
-import Button from './Button';
+import Button from '../Button/Button';
 
 export default function CardUI({cardProp}) {
 	

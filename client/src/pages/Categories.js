@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import CardUI from '../components/CardUI';
+import CardUI from '../components/Card/CardUI';
 
 export default function Categories() {
 

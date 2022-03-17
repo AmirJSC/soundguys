@@ -36,24 +36,18 @@ export default function Login() {
 		})
 		.then(res => res.json())
 		.then(data => {
+			console.log(data);
+			console.log(data.access)
 			if(typeof data.access !== 'undefined') {
 				// When the user credentails posted are correct, the server returns the token.
 				localStorage.setItem('token', data.access);
 				retrieveUserDetails(data.access);
-
-				if (hasPreviousState) {
-      				navigate(-1);
-    			} 
-    			else {
-      				navigate("/");
-    			}
 
 				Swal.fire({
 					title: 'Login Successful',
 					icon: 'success',
 					text: 'Shop and Enjoy'
 				})
-				console.log('lol')
 			}
 			else {
 				Swal.fire({ 

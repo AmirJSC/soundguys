@@ -1,5 +1,5 @@
 import './ProductDisplay.css';
-import UserContext from '../UserContext';
+import UserContext from '../../UserContext';
 import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import {Form} from 'react-bootstrap';
@@ -35,7 +35,7 @@ export default function ProductDisplay({description, name, price, productId, onC
 				</span>
 				{	user.id !== null 
 					?
-					<button className="cart-btn" onClick={() => onClick(productId, quantity)}>ADD TO CART</button>
+					<button className="cart-btn" onClick={() => onClick(productId, quantity, url)}>ADD TO CART</button>
 					:
 					<Link to="/login"><button className="cart-btn">ADD TO CART</button></Link>
 				}

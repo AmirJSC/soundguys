@@ -1,12 +1,13 @@
 import { useState, useContext, Fragment } from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
-import UserContext from '../UserContext';
+import UserContext from '../../UserContext';
+import AccountCircleIcon from '@material-ui/icons/AccountCircleRounded';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
 
-export default function Cart() {
+export default function AppNavbar() {
 
 	const { user } = useContext(UserContext);
 
@@ -25,7 +26,11 @@ export default function Cart() {
       				{
       					(user.id !== null) 
       					?
-      					<Nav.Link as={Link} to='/logout'>Logout</Nav.Link>
+      					
+      					<NavDropdown className="dropdown" title={<div style={{display: "inline-block"}}><AccountCircleIcon/></div>} id="collasible-nav-dropdown">
+					        <NavDropdown.Item href="/dashboard">Dashboard</NavDropdown.Item>
+					        <NavDropdown.Item href="/logout">Sign out</NavDropdown.Item>
+      					</NavDropdown>
       					:
       					<Nav.Link as={Link} to='/login'> Login</Nav.Link>
       				}

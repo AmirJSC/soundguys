@@ -1,4 +1,4 @@
-import Button from './Button';
+import Button from '../Button/Button';
 import { Container, Row, Col } from 'react-bootstrap';
 
 
@@ -9,7 +9,7 @@ export default function CarouselSection() {
                 <Col xs={12} md={7} className="p-0">
                     <img
                         className="img-fluid"
-                        src={require('../assets/images/imgFeatured1.png')}
+                        src={require('../../assets/images/imgFeatured1.png')}
                         alt="First slide"
                     />
                 </Col>
@@ -31,7 +31,7 @@ export default function CarouselSection() {
                 <Col xs={12} md={7} className="p-0 order-lg-2">
                     <img
                         className="img-fluid"
-                        src={require('../assets/images/imgFeatured2.png')}
+                        src={require('../../assets/images/imgFeatured2.png')}
                         alt="First slide"
                     />
                 </Col>
@@ -53,7 +53,7 @@ export default function CarouselSection() {
                 <Col xs={12} md={7} className="p-0">
                     <img
                         className="img-fluid"
-                        src={require('../assets/images/imgFeatured3.png')}
+                        src={require('../../assets/images/imgFeatured3.png')}
                         alt="First slide"
                     />
                 </Col>

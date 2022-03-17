@@ -1,6 +1,6 @@
 import Carousel from 'react-bootstrap/Carousel';
 import './Carousel.css';
-import Button from './Button';
+import Button from '../Button/Button';
 
 export default function CarouselSection() {
     return (
@@ -8,7 +8,7 @@ export default function CarouselSection() {
             <Carousel.Item className="carouselFit" interval={1500}>
                 <img
                     className="d-block w-100 carouselImg"
-                    src={require('../assets/images/imgCarousel1.jpg')}
+                    src={require('../../assets/images/imgCarousel1.jpg')}
                     alt="First slide"
                 />
                 <div className="overlay">
@@ -25,7 +25,7 @@ export default function CarouselSection() {
             <Carousel.Item className="carouselFit" interval={1500}>
                 <img
                     className="d-block w-100 carouselImg"
-                    src={require('../assets/images/imgCarousel2.jpg')}
+                    src={require('../../assets/images/imgCarousel2.jpg')}
                     alt="First slide"
                 />
                 <div className="overlay">
@@ -42,7 +42,7 @@ export default function CarouselSection() {
             <Carousel.Item className="carouselFit" interval={1500}>
                 <img
                     className="d-block w-100 carouselImg"
-                    src={require('../assets/images/imgCarousel3.jpg')}
+                    src={require('../../assets/images/imgCarousel3.jpg')}
                     alt="First slide"
                 />
                 <div className="overlay">
