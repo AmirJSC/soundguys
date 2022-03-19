@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 export default function CarouselSection() {
     return (
-        <div className="mt-5">
+        <div className="my-5">
             <Row>
                 <Col xs={12} md={7} className="p-0">
                     <img
