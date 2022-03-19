@@ -2,7 +2,6 @@ import './ProductDisplay.css';
 import UserContext from '../../UserContext';
 import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import {Form} from 'react-bootstrap';
 
 export default function ProductDisplay({description, name, price, productId, onClick, url}) {
 

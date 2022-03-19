@@ -1,10 +1,9 @@
-import { Card } from 'react-bootstrap';
 import './Card.css';
 import Button from '../Button/Button';
 
 export default function CardUI({cardProp}) {
 	
-	const {url, description, name, price, quantity, _id} = cardProp;
+	const {url, name, price, _id} = cardProp;
 
 	return (
 		<div className="card mx-3">

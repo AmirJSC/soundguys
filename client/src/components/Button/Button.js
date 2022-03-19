@@ -10,7 +10,7 @@ export default function Button({children, id, onClick, buttonStyle, buttonSize})
 
 		return (
 			<Link to={`/products/${id}`} className='btn-mobile'>
-			{	buttonStyle == 'btn--info' ?
+			{	buttonStyle === 'btn--info' ?
 				<button className={`${checkButtonStyle} ${checkButtonSize}`}
 				onClick={onClick}
 				>

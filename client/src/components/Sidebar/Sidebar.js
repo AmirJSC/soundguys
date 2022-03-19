@@ -2,7 +2,6 @@ import "./Sidebar.css";
 import LineStyle from '@material-ui/icons/LineStyle';
 import Inventory from '@mui/icons-material/Inventory';
 import AccountCircleIcon from '@material-ui/icons/AccountCircleRounded';
-import { Link } from 'react-router-dom';
 export default function Sidebar() {
     return (
         <div className="sidebar">

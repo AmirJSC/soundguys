@@ -1,5 +1,5 @@
-import { Fragment, useState, useEffect, useContext } from 'react';
-import { Navigate, Link, useNavigate, useLocation } from 'react-router-dom';
+import { useState, useEffect, useContext } from 'react';
+import { Navigate, Link } from 'react-router-dom';
 import UserContext from '../UserContext';
 import Swal from 'sweetalert2';
 // Material UI 
@@ -17,10 +17,6 @@ export default function Login() {
 	const avatarStyle = {backgroundColor: '#ffe135'};
 	const btnStyle = {margin: '9px 0'};
 
-	const navigate = useNavigate();
-  	const location = useLocation();
-  	const hasPreviousState = location.key !== "default";
-
 	function authenticate(e) {
 		e.preventDefault();
 
@@ -36,8 +32,6 @@ export default function Login() {
 		})
 		.then(res => res.json())
 		.then(data => {
-			console.log(data);
-			console.log(data.access)
 			if(typeof data.access !== 'undefined') {
 				// When the user credentails posted are correct, the server returns the token.
 				localStorage.setItem('token', data.access);

@@ -3,9 +3,6 @@ import './OrderBar.css';
 
 export default function OrderBar({user}) {
 
-	const [orderId, setOrderId] = useState('');
-	const [bill, setBill] = useState(0);
-	const [data, setDate] = useState('');
 	const [products, setProducts] = useState([]);
 
 	useEffect(() => {

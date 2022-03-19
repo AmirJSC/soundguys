@@ -1,9 +1,9 @@
-import { Fragment, useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { Navigate, useNavigate, Link } from 'react-router-dom';
 import UserContext from '../UserContext';
 import Swal from 'sweetalert2';
 // Material UI 
-import { Grid, Paper, Avatar, TextField, Button, Typography } from '@material-ui/core';
+import { Grid, Paper, TextField, Button, Typography } from '@material-ui/core';
 
 export default function Register() {
 

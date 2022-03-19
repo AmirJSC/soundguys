@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext, Fragment } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { Navigate } from 'react-router-dom';
 import { Badge } from 'react-bootstrap';
 import UserContext from '../UserContext';
@@ -62,6 +62,7 @@ export default function Cart() {
 	}
 
 	useEffect(() => {
+		console.log("EYYY")
 		fetch('https://serene-sea-03250.herokuapp.com/carts/', {
 			method: "GET",
 			headers: {
@@ -76,7 +77,7 @@ export default function Cart() {
 				setCartId(data[0]._id)
 			}
 		})
-	}, [])
+	}, [token])
 
 	return (
 		(user.id === null)
@@ -88,7 +89,7 @@ export default function Cart() {
 				<div className="col-md-6 mx-auto" key={product.productId}>
 					<div className="d-flex justify-content-between px-3">
 						<div className="d-flex">
-							<img src={product.url} alt="product photo" style={imgStyle}/>
+							<img src={product.url} alt="product" style={imgStyle}/>
 							<div>
 								<div>{product.name}</div>
 								<p className="gray">PRICE</p>
