@@ -53,13 +53,25 @@ Nav .active {
 }
 
 .dashboard-container {
-    display: flex;
+    padding: 10px;
+    width: 100%;
+    max-width: 1020px;
+    margin: 10px auto;
+    height: 100vh;
+    border: 3px solid #E0E0E0;
+    border-radius: 3px;
+    overflow: scroll;
 }
 
 .products, .account-dashboard, .orders {
     flex: 4;
 }
 
+@media screen and (max-width: 450px) {
+    .dashboard-container {
+        border: hidden;
+    }
+}
 
 @media screen and (min-width: 390px) {
     .paperStyle {

@@ -10,7 +10,7 @@ module.exports.getCart = (payload) => {
 }
 
 module.exports.addToCart = async (data) => {
-	const {productId, quantity} = data.reqBody;
+	const {productId, quantity, url} = data.reqBody;
 
 	// findOne returns null (falsy) if nothing is found
 	let cart = await Cart.findOne({userId: data.payload.id});
@@ -33,7 +33,7 @@ module.exports.addToCart = async (data) => {
 			cart.products[productIndex] = productItem;
 		}
 		else {
-			cart.products.push({productId: productId, name: name, quantity: quantity, price: price})
+			cart.products.push({productId: productId, name: name, quantity: quantity, price: price, url: url})
 		}
 		cart.bill += price * quantity;
 
@@ -42,7 +42,7 @@ module.exports.addToCart = async (data) => {
 				return false;
 			}
 			else {
-				return `${name} successfully added to cart`;
+				return true;
 			}
 		})
 
@@ -51,7 +51,7 @@ module.exports.addToCart = async (data) => {
 		// There is no cart existing so create one. 
 		cart = new Cart({
 			userId: data.payload.id,
-			products: [{productId: productId, name: name, quantity: quantity, price: price}],
+			products: [{productId: productId, name: name, quantity: quantity, price: price, url: url}],
 			bill: price * quantity
 		});
 
@@ -60,7 +60,7 @@ module.exports.addToCart = async (data) => {
 				return false;
 			}
 			else {
-				return result;
+				return true;
 			}
 		})
 	}

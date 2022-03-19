@@ -1,0 +1,18 @@
+.order-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	border: 1px solid #E8E8E8;
+	border-radius: 5px;
+	padding: 12px;
+	margin: 5px;
+}
+
+.status {
+	color: green;
+	display: inline;
+}
+
+.order-info {
+	color: #A9A9A9;
+}

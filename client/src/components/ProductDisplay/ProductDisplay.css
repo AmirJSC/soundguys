@@ -88,3 +88,13 @@
 
 }
 
+@media screen and (max-width: 300px) {
+	.info-container {
+		font-size: .6rem;
+	}
+	.cart-btn {
+    	padding: 5px 12px;
+    	font-size: .7rem;
+}
+
+}

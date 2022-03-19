@@ -21,6 +21,10 @@ const productSchema = new mongoose.Schema({
 		type: Boolean,
 		default: true
 	},
+	url: {
+		type: String,
+		required: [true, "Url is required."]
+	},
 	createdOn: {
 		type: Date,
 		default: new Date()

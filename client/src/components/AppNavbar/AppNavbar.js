@@ -28,8 +28,8 @@ export default function AppNavbar() {
       					?
       					
       					<NavDropdown className="dropdown" title={<div style={{display: "inline-block"}}><AccountCircleIcon/></div>} id="collasible-nav-dropdown">
-					        <NavDropdown.Item href="/dashboard">Dashboard</NavDropdown.Item>
-					        <NavDropdown.Item href="/logout">Sign out</NavDropdown.Item>
+					        <Nav.Link as={NavLink} to='/dashboard'>Dashboard</Nav.Link>
+					       <Nav.Link as={NavLink} to='/logout'>Sign out</Nav.Link>
       					</NavDropdown>
       					:
       					<Nav.Link as={Link} to='/login'> Login</Nav.Link>

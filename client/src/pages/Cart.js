@@ -3,6 +3,7 @@ import { Navigate } from 'react-router-dom';
 import { Badge } from 'react-bootstrap';
 import UserContext from '../UserContext';
 import DeleteIcon from '@material-ui/icons/DeleteOutlineSharp';
+import Swal from 'sweetalert2';
 
 export default function Cart() {
 
@@ -10,6 +11,7 @@ export default function Cart() {
 	const [products, setProducts] = useState([]);
 	const [bill, setBill] = useState(0);
 	const [cartId, setCartId] = useState('');
+	const token = localStorage.getItem('token');
 	const checkoutBtnStyle = {padding: '8px 20px', borderRadius: '2px', 
 							border: '1px solid', backgroundColor: '#fff' 
 							};
@@ -19,23 +21,51 @@ export default function Cart() {
 		fetch('https://serene-sea-03250.herokuapp.com/orders/', {
 			method: "POST",
 			headers: {
-				Authorization: `Bearer ${localStorage.getItem("token")}`
+				Authorization: `Bearer ${token}`
 			}
 			})
 			.then(res => res.json())
 			.then(data => {
-				console.log(data)
-				setProducts([]);
-				setBill(0);
+				if(data !== false) {
+					setProducts([]);
+					setBill(0);
+
+					Swal.fire({
+						title: 'Perfect!',
+						icon: 'success',
+						text: 'Thank you for the purchase.'
+					})
+				}
+				else {
+					Swal.fire({
+						title: 'Something went wrong',
+						icon: 'error',
+						text: 'Please try again.'
+					})
+				}
 		})
 	}
 
+	const removeCartItem = (productId) => {
+
+		fetch(`https://serene-sea-03250.herokuapp.com/carts/${productId}`, {
+			method: 'DELETE',
+			headers: {
+				Authorization: `Bearer ${token}`
+			}
+		})
+		.then(res => res.json())
+		.then(data => {
+			setProducts(data.products);
+		})
+
+	}
 
 	useEffect(() => {
 		fetch('https://serene-sea-03250.herokuapp.com/carts/', {
 			method: "GET",
 			headers: {
-				Authorization: `Bearer ${localStorage.getItem("token")}`
+				Authorization: `Bearer ${token}`
 			}
 		})
 		.then(res => res.json())
@@ -55,7 +85,7 @@ export default function Cart() {
 		:
 		<div className="my-5">
 			{products.map((product) => 
-				<div className="col-md-6 mx-auto" key={product._id}>
+				<div className="col-md-6 mx-auto" key={product.productId}>
 					<div className="d-flex justify-content-between px-3">
 						<div className="d-flex">
 							<img src={product.url} alt="product photo" style={imgStyle}/>
@@ -66,7 +96,7 @@ export default function Cart() {
 							</div>
 						</div>
 						<div>
-							<div>PRICE</div>
+							<div onClick={() => removeCartItem(product.productId)}><DeleteIcon/></div>
 							<p>${product.price}</p>
 							<Badge bg="light" text="dark" pill>{product.quantity}</Badge>
 						</div>
