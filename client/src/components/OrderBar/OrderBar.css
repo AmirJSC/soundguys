@@ -1,7 +1,7 @@
 .order-wrapper {
 	display: flex;
 	flex-direction: column;
-	justify-content: start;
+	justify-content: flex-start;
 	border: 1px solid #E8E8E8;
 	border-radius: 5px;
 	padding: 12px;

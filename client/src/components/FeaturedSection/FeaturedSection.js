@@ -1,5 +1,5 @@
 import Button from '../Button/Button';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
 
 export default function CarouselSection() {
