@@ -11,8 +11,6 @@
     cursor: pointer;
 }
 
-/*************************** Button Types ***************************/
-
 .btn--primary {
     background-color: var(--primary);
     color: var(--secondary);
@@ -40,8 +38,6 @@
     border-bottom: 1px solid #505050;
 }
 
-/*************************** Button Sizes ***************************/
-
 .btn--info--size {
     padding: .4rem .25rem;
     font-size: .8rem;
@@ -61,8 +57,6 @@
     padding: 12px 26px;
     font-size: 20px;
 }
-
-/*************************** Hover Effects ***************************/ 
 
 .btn--medium:hover, .btn--large:hover {
     background: #fff;

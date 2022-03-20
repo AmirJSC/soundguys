@@ -1,28 +1,13 @@
-import { useEffect, useContext } from 'react';
+import { useContext } from 'react';
 import { Navigate } from 'react-router-dom';
 import { Tabs, Tab } from 'react-bootstrap';
 import UserContext from '../UserContext';
-// Components
 import ProfileSection from '../components/ProfileSection/ProfileSection';
 import OrderBar from '../components/OrderBar/OrderBar';
 
 export default function Dashboard() {
 
 	const { user } = useContext(UserContext);
-
-	useEffect(() => {
-
-		fetch('https://serene-sea-03250.herokuapp.com/orders/orderHistory', {
-			method: 'GET',
-			headers: {
-				Authorization: `Bearer ${localStorage.getItem("token")}`
-			}
-		})
-		.then(res => res.json())
-		.then(data => {
-			console.log(data);
-		})
-	}, []);
 
 	return (
 		(user.id === null)

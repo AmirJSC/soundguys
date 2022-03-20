@@ -31,7 +31,7 @@ export default function ProfileSection() {
 				setStreetAddress(data.address[0].streetAddress);
 				setCity(data.address[0].city);
 			})
-		}, []);
+		}, [token]);
 
 		const updateUserDetails = () => {
 			fetch('https://serene-sea-03250.herokuapp.com/users/', {
@@ -49,7 +49,6 @@ export default function ProfileSection() {
 			})
 			.then(res => res.json())
 			.then(data => {
-				console.log(data);
 				if(data === false) {
 
 					Swal.fire({

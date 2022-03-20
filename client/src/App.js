@@ -5,7 +5,6 @@ import { Routes, Route } from 'react-router-dom';
 import { UserProvider } from './UserContext';
 // Pages
 import Home from './pages/Home';
-import Products from './pages/Products';
 import ProductView from './pages/ProductView';
 import Categories from './pages/Categories';
 import Cart from './pages/Cart';
@@ -14,7 +13,6 @@ import Login from './pages/Login';
 import Logout from './pages/Logout';
 import Error from './pages/Error';
 import Dashboard from './pages/Dashboard';
-import Orders from './pages/Orders';
 // Components
 import AppNavbar from './components/AppNavbar/AppNavbar';
 import Footer from './components/Footer/Footer';
@@ -64,15 +62,12 @@ function App() {
             <AppNavbar/>
             <Routes>
                 <Route exact path ='/' element={<Home/>}/>
-                <Route exact path ='/products' element={<Products/>}/>
                 <Route exact path ='/products/:productId' element={<ProductView/>}/>
                 <Route exact path ='/products/category/:category' element={<Categories/>}/>
                 <Route exact path ='/cart' element={<Cart/>}/>
                 <Route exact path ='/register' element={<Register/>}/>
                 <Route exact path ='/login' element={<Login/>}/>
                 <Route exact path ='/dashboard' element={<Dashboard/>}/>
-                <Route exact path='/dashboard/orders' element={<Orders/>}/>
-                <Route exact path='/dashboard/products' element={<Products/>}/>
                 <Route exact path ='/logout' element={<Logout/>}/>
                 <Route exact path ='*' element={<Error/>}/>
             </Routes>

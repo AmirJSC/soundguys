@@ -62,7 +62,6 @@ export default function Cart() {
 	}
 
 	useEffect(() => {
-		console.log("EYYY")
 		fetch('https://serene-sea-03250.herokuapp.com/carts/', {
 			method: "GET",
 			headers: {

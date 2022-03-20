@@ -20,6 +20,7 @@ export default function CarouselSection() {
                         Bose QuietComfort® Earbuds feature all the noise cancelling performance of the best over-ear headphones from Bose — from a compact, truly wireless earbud.
                         </p>
                         <Button
+                        id='6235cb86e8bdf693524b50d9'
                         buttonStyle='btn--secondary'
                         buttonSize='btn--medium'>
                         Learn More
@@ -42,6 +43,7 @@ export default function CarouselSection() {
                         It’s not always easy to find a quiet place to take a call. The microphone system built into these earbuds is specially designed to pick up the sound of your voice — while it rejects most of the noise around you
                         </p>
                         <Button
+                        id='622d28d1d9f7689bbd71047c'
                         buttonStyle='btn--secondary'
                         buttonSize='btn--medium'>
                         Learn More
@@ -64,6 +66,7 @@ export default function CarouselSection() {
                             It’s not always easy to find a quiet place to take a call. The microphone system built into these earbuds is specially designed to pick up the sound of your voice — while it rejects most of the noise around you.
                         </p>
                         <Button
+                        id='622e5f4d058c97fbfc04566f'
                         buttonStyle='btn--secondary'
                         buttonSize='btn--medium'>
                         Learn More

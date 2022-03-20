@@ -7,7 +7,9 @@ export default function Logout() {
 	const { unsetUser, setUser } = useContext(UserContext);
 	
 	unsetUser();
-	useEffect(() => {setUser({id: null})}, []);
+	useEffect(() => {setUser({id: null})
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 
 	return (
 		<Navigate to='/login'/>

@@ -31,6 +31,7 @@ export default function OrderBar({user}) {
 			})
 
 		}
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
 	return (

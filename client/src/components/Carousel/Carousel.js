@@ -15,6 +15,7 @@ export default function CarouselSection() {
                     <h1>Active Noise-Cancelling True Wireless Earphones</h1>
                     <h5>Deep Focus</h5>
                     <Button
+                        id='622e6041058c97fbfc045691'
                         buttonStyle='btn--outline'
                         buttonSize='btn--medium'
                     >
@@ -32,6 +33,7 @@ export default function CarouselSection() {
                     <h1>Wireless Gaming Headphones</h1>
                     <h5>Never play the same</h5>
                     <Button
+                        id='6235cb74e8bdf693524b50d3'
                         buttonStyle='btn--outline'
                         buttonSize='btn--medium'
                     >
@@ -49,6 +51,7 @@ export default function CarouselSection() {
                     <h1>Intelligent-Connect Speakers</h1>
                     <h5>Hear the future of AI</h5>
                       <Button
+                        id='6235c94be8bdf693524b5093'
                         buttonStyle='btn--outline'
                         buttonSize='btn--medium'
                     >
