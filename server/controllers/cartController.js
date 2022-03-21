@@ -84,12 +84,12 @@ module.exports.removeProduct = async (data) => {
 		cart.bill -= productItem.quantity*productItem.price;
         cart.products.splice(productIndex,1);
 	}
-	return cart.save().then((result, err) => {
+	return cart.update(cart).then((result, err) => {
 		if(err) {
 			return false;
 		}
 		else {
-			return result;
+			return cart;
 		}
 	})
 
